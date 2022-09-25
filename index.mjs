@@ -24,8 +24,8 @@ console.log(`Token information:
   Symbol: ${oneTok.sym}
   Hard Capped Supply: 1440 ${oneTok.sym}`);
 
-const RESULT = ['Your company has exceeded Carbon Emission Allowance, You forfeit funds', 
-'Thank you for reducing your carbon emissions, your Company funds will be returned'];
+const RESULT = ['your company has exceeded Carbon Emission Allowance, you forfeit funds', 
+'you lowered your carbon emissions, your Company funds will be returned'];
 
 const Shared = (Who) => ({
   see: (b) => {
@@ -82,6 +82,6 @@ const afterBob = await getBalance(accBob);
 
 console.log(`Admin before ${beforeAlice} and Admin after ${afterAlice}`);
 console.log(`Company before ${beforeBob} and Company after ${afterBob}`);
-console.log(`Next period increase of 2.11% is ${stdlib.formatCurrency(cost - (cost * .0211))} for 1 Ton`);
-
+console.log(`Next period HARD CAP decrease of 2.11% is ${(1440*0.9788889)}.`);
+//Unsure as to why the above arithmetic does not work as expected
 console.log('Goodbye, Alice and Bob!');
